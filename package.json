@@ -1,0 +1,11 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "this is a simple calculator app with a side for scientific calculation",
+    "scripts": {
+        "dev": "concurrently \"tsc --watch\" \"npx live-server --open=index.html\""
+    },
+    "dependencies": {
+        "concurrently": "^9.2.1"
+    }
+}

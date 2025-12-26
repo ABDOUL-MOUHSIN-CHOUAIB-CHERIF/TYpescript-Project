@@ -1,0 +1,213 @@
+/* styles.css - Navigation and Homepage */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navigation {
+    background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f1c40f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Create Event Link */
+.navigation button {
+    background: #2679bd;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.navigation button:hover {
+    background: #2b64c0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Main Content */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 40px 0 30px 0;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+/* Search Section */
+div  {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search Input */
+input[type="text"] {
+    flex: 2;
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Category Select */
+select {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    cursor: pointer;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 20px;
+    padding-right: 50px;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-left: 100px;
+    width:70%;
+    border-radius: 15px;
+    padding: 15px 10px;
+    background-color: #b4dfec;
+    color: #2c3e50;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 8px;
+    display: block;
+}
+
+ textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+button{
+    display: inline-block;
+    background: #24b8e6;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-color: #24b8e6;
+    width: 200px;
+}
+
+button:hover{
+    background: #05bbf3;
+   transform: translateY(-3px);
+}
+/* Event Cards Container (for future events) */
+.event-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .navigation h2 {
+        font-size: 1.8rem;
+    }
+    
+    div > div {
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    input[type="text"], select {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin: 30px 20px;
+    }
+}

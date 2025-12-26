@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS-PROJECT</title>
+    <link rel="stylesheet" href="styles/style1.css">
+
+</head>
+<body>
+    <nav class="navigation">
+        <h2>SAINT JEAN EVENT MANAGER</h2>
+        <button  id="Create">Create Event</button>
+        <button id="themeToggle">🌙 Dark Mode</button>
+    </nav>
+
+    <section id="view-home">
+        <h1>Upcoming Events</h1>
+        <div class="filters">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <select id="filterCategory">
+                <option value="">All Categories</option>
+                <option value="workshop">Workshop</option>
+                <option value="Sport">Sport</option>
+                <option value="Conference">Conference</option>
+            </select>
+        </div>
+        <div id="eventContainer" class="event-grid"></div>
+    </section>
+
+    <section id="view-createEvent" style="display:none;">
+        <h1>Create New Event</h1>
+        <form id="eventCreationForm">
+            <input type="text" id="eventTittle" placeholder="Title" required>
+            <textarea id="eventDescription" placeholder="Description"></textarea>
+            <input type="date" id="eventDate" required>
+            <input type="text" id="eventLocation" placeholder="Location">
+            <select id="eventCategory">
+                <option value="workshop">Workshop</option>
+                <option value="Sport">Sport</option>
+                <option value="Conference">Conference</option>
+            </select>
+            <input type="number" id="eventCapacity" placeholder="Max Capacity" required>
+            <button type="submit">Save Event</button>
+        </form>
+    </section>
+
+    <section id="view-details" style="display:none;">
+        <div id="detailContent"></div>
+        <hr>
+        <h3>Register for this Event</h3>
+        <form id="registrationForm">
+            <input type="text" id="userName" placeholder="Full Name" required>
+            <input type="email" id="userEmail" placeholder="Institutional Email" required>
+            <button type="submit">Confirm Registration</button>
+        </form>
+    </section>
+
+    <script type="module" src="dist/pages/main.js"></script>
+</body>
+</html>
