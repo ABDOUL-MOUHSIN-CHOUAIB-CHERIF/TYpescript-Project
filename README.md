@@ -78,11 +78,6 @@ Email        -- chouaib.abdoul@saintjeaningenieur.org
 https://github.com/ABDOUL-MOUHSIN-CHOUAIB-CHERIF/TYpescript-Project.git
 
 
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/ABDOUL-MOUHSIN-CHOUAIB-CHERIF/TYpescript-Project.git
-git push -u origin main
+
 
 
