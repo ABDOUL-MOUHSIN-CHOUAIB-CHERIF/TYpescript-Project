@@ -17,7 +17,7 @@
     Create events                   --YES
     Display full event list         --YES
     Filter events                   -- YES
-    Event detail page               -- NO
+    Event detail page               -- YES
     User registration               -- YES
     Duplicate registration protection -- YES
     Capacity control                -- YES
@@ -45,9 +45,7 @@ event-app/
  ### Yes the project structure has been respscted
 
 ### 4. Installation & Execution 
-npm install 
-npm run build 
-Open index.html  
+npm run dev 
 
 ### 5. How the Flow works now
 
